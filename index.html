@@ -1,23 +1,133 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 <head>
     <meta charset="utf-8">
     <title>Тестовое задание</title>
-    <link href="CSS/style.css" rel=stylesheet type="text/css">
-  
+    <link href="CSS/style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-    <header>
-        <h1>Портфолио</h1>
-        <button id="theme-toggle" class="theme-toggle">
-            <span class="theme-icon">☀️</span>
-            <span class="theme-icon">🌙</span>
-            <div class="switch-thumb"></div>
-        </button>
-    </header>
-    <p>Добро пожаловать в мое портфолио! Здесь вы найдете информацию о моих проектах, навыках и опыте работы. Я стремлюсь создавать качественные и инновационные решения, которые соответствуют потребностям клиентов и пользователей.</p>
+    
+    <div class="site-portfolio">
+        <header class="header_content">
+            <h1>Портфолио</h1>
+            <div class="theme-toggle">
+                <span class="theme-icon">Светлая</span>
+                <label class="switch" for="checkbox">
+                    <input type="checkbox" id="checkbox">
+                    <div class="slider round"></div>
+                </label>
+                <span class="theme-icon">Темная</span>
+            </div>
+        </header>
+        
+        <main class="main_content">
+            <section class="home-section" id="screen_home">
+                <div class="home-layout">
+                    <div class="Ava">
+                        <div class="avatar-circle">
+                            <img src="Images/menu.png" class="img_ava" alt="Аватар для меню">
+                        </div>
+                    </div>
+                    
+                    <div class="intro-text">
+                        <h2>Привет, я веб-разработчик Юлия</h2>
+                        <p>Добро пожаловать в мое портфолио!</p>
+                    </div>
 
+                    <nav class="semicircle-menu">
+                        <a href="#screen_about" class="menu-btn item-1 active-btn">О себе</a>
+                        <a href="#screen_skills" class="menu-btn item-2">Навыки</a>
+                        <a href="#screen_experience" class="menu-btn item-3">Опыт & Вуз</a>
+                    </nav>
+                </div>
+            </section>
 
-  <script src="JS/script.js"></script>
+            <section class="content-section" id="screen_about">
+                <h2>О себе</h2>
+                <div class="card single-card">
+                    <p>Меня зовут Юлия. Я дипломированный специалист: окончила колледж по направлению "Программирование в КС" и университет по специальности "Программная инженерия". В данный момент работаю в Сбербанке (отдел безопасности, ТСО), но активно развиваюсь в веб-разработке. Моя цель — углубить и структурировать свои знания во фронтенде, научиться создавать качественные, адаптивные интерфейсы и применять свой инженерный бэкграунд для решения реальных задач в коммерческой разработке.</p>
+                </div>
+            </section>
+
+            <section class="content-section" id="screen_skills">
+                <h2>Мои Навыки</h2>
+                
+                <div class="skills-controls">
+                    <input type="text" id="skills-search" placeholder="Поиск по навыкам...">
+                    <div class="skills-filters">
+                        <button class="filter-btn active-filter" data-filter="all">Все</button>
+                        <button class="filter-btn" data-filter="frontend">Frontend</button>
+                        <button class="filter-btn" data-filter="backend">Backend</button>
+                        <button class="filter-btn" data-filter="tools">Tools</button>
+                    </div>
+                </div>
+
+                <div id="no-skills-message" class="no-results">Ничего не найдено.</div>
+
+                <div class="grid-container" id="skills-grid">
+                    <div class="card skill-card" data-category="frontend">
+                        <h3>HTML</h3>
+                        <p>Валидная семантическая верстка, знание стандартов HTML5.</p>
+                    </div>
+                    <div class="card skill-card" data-category="frontend">
+                        <h3>CSS</h3>
+                        <p>Flexbox, CSS Grid, адаптивный дизайн и анимации.</p>
+                    </div>
+                    <div class="card skill-card" data-category="frontend">
+                        <h3>JavaScript</h3>
+                        <p>Работа с DOM, ES6+, обработка событий и асинхронные запросы.</p>
+                    </div>
+                    <div class="card skill-card" data-category="frontend">
+                        <h3>TypeScript</h3>
+                        <p>Строгая типизация для масштабируемых приложений.</p>
+                    </div>
+                    <div class="card skill-card" data-category="backend">
+                        <h3>C#</h3>
+                        <p>Разработка бэкенда на .NET платформе, ООП и алгоритмы.</p>
+                    </div>
+                    <div class="card skill-card" data-category="backend">
+                        <h3>Java</h3>
+                        <p>Разработка серверной логики и работа с базами данных.</p>
+                    </div>
+                    <div class="card skill-card" data-category="tools">
+                        <h3>Git</h3>
+                        <p>Контроль версий, слияние веток и работа с GitHub.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-section" id="screen_experience">
+                <h2>Опыт и Образование</h2>
+                <div class="grid-container">
+                    <div class="card">
+                        <h3>Образование</h3>
+                        <p>
+                            <strong>Колледж</strong><br>
+                            Специальность: Программирование в КС<br><br>
+                            <strong>Высшее образование (Университет)</strong><br>
+                            Направление: Программная инженерия (Выпускница)
+                        </p>
+                    </div>
+                    <div class="card">
+                        <h3>Опыт и практика</h3>
+                        <p>
+                            <strong>Практические проекты</strong><br>
+                            Реализация комплексных проектов в рамках обучения, проектирование баз данных, разработка алгоритмов и создание интерактивных SPA-интерфейсов.<br><br>
+                            <strong>Текущая занятость</strong><br>
+                            ПАО Сбербанк, отдел безопасности (ТСО).
+                        </p>
+                    </div>
+                </div>
+            </section>
+        </main>
+        
+        <footer>
+            <p style="text-align: center; font-size: 1.2rem;">© 2026 Все права защищены</p>
+        </footer>
+        
+        <div class="tenderness"></div>
+    </div>
+
+    <script src="JS/JavaScript.js"></script>
 </body>
 </html>
